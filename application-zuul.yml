@@ -33,7 +33,7 @@ spring:
   application:
       name: microservice-zuul-gateway
 server:
-  port: 9527
+  port: 9528
 eureka:
   client:
     service-url:
