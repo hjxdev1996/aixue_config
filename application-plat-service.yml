@@ -1,0 +1,30 @@
+spring:
+  profiles:
+    active: dev  #这是默认去找到文件
+---
+spring:
+  profiles: dev
+  application:
+      name: EMPLOYEE-PROVIDER
+server:
+  port: 8001
+eureka:
+  client:
+    service-url:
+      defaultZone: http://www.eureka-7001.com:7001/eureka/ #这里是另一个中心的地址
+  instance:
+    prefer-ip-address: true #显示客户端的真实ip地址
+
+---
+spring:
+  profiles: test
+  application:
+      name: EMPLOYEE-PROVIDER
+server:
+  port: 8002
+eureka:
+  client:
+    service-url:
+      defaultZone: http://www.eureka-7001.com:7001/eureka/ #这里是另一个中心的地址
+  instance:
+    prefer-ip-address: true #显示客户端的真实ip地址
